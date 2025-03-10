@@ -1,0 +1,1874 @@
+@charset "UTF-8";
+/* bodyのデフォルトを定義 */
+body {
+  text-rendering: optimizeSpeed;
+  line-height: 1.8;
+  font-family: "Yu Gothic Medium", "游ゴシック Medium", YuGothic, "游ゴシック体", Meiryo, sans-serif;
+  font-size: 14px;
+  letter-spacing: 0.1em;
+  font-feature-settings: "palt";
+}
+@media (min-width: 768px) {
+  body {
+    font-size: 16px;
+  }
+}
+
+/* marginとpaddingを削除 */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+figure,
+blockquote,
+dl,
+dd,
+ul,
+ol,
+li {
+  margin: 0;
+  padding: 0;
+}
+
+/* pが連続したら段落を空ける */
+p + p {
+  margin-top: 1em;
+}
+
+/* list-styleを削除 */
+ul,
+ol {
+  list-style: none;
+}
+
+/* imgとpictureタグの設定 */
+img,
+picture {
+  max-width: 100%;
+  height: auto;
+  vertical-align: bottom;
+}
+
+/* 各ブラウザやOSの設定で動きの制限をしている場合、すべてのアニメーションとトランジションを削除 */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+/* aタグのテキストカラーを親要素から継承と、ホバー時のアニメーション */
+a {
+  color: inherit;
+}
+@media screen and (min-width: 768px) {
+  a {
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+  }
+}
+a:hover, a:focus {
+  text-decoration: none;
+  color: inherit;
+}
+@media screen and (min-width: 768px) {
+  a:hover, a:focus {
+    opacity: 0.7;
+    text-decoration: none;
+  }
+}
+@media screen and (min-width: 768px) {
+  a:hover img {
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+  }
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  font-family: "notoSansJp", "Yu Gothic Medium", "游ゴシック Medium", YuGothic, "游ゴシック体", Meiryo, sans-serif;
+}
+
+@font-face {
+  font-family: notoSansJp;
+  src: url("../fonts/NotoSansJP-Regular.ttf");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: notoSansJp;
+  src: url("../fonts/NotoSansJP-Medium.ttf");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: cormorant;
+  src: url("../fonts/Cormorant-Italic.ttf");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: cormorantItalic;
+  src: url("../fonts/Cormorant-Italic.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+.ffCormorant {
+  font-family: "cormorant", sans-serif;
+  font-style: normal;
+}
+
+.ffCormorantItalic {
+  font-family: "cormorantItalic", sans-serif;
+  font-style: italic;
+}
+
+header {
+  background-color: #EFFAFF;
+}
+@media (min-width: 768px) {
+  header div.logo_tel.container {
+    display: flex;
+    width: 1216px;
+    justify-content: space-between;
+    padding: 24px 0;
+  }
+}
+@media (min-width: 768px) and (max-width: 1399.98px) {
+  header div.logo_tel.container {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1199.98px) {
+  header div.logo_tel.container {
+    padding-left: 64px;
+    padding-right: 64px;
+  }
+}
+@media (min-width: 768px) and (max-width: 991.98px) {
+  header div.logo_tel.container {
+    padding: 0;
+    justify-content: center;
+    gap: 0 64px;
+    padding: 16px 0;
+  }
+}
+header div.logo_tel.container div.logo {
+  display: flex;
+  align-items: center;
+  gap: 0 16px;
+  padding: 8px 0;
+}
+@media (min-width: 992px) {
+  header div.logo_tel.container div.logo {
+    padding: 0;
+    gap: 0 32px;
+  }
+}
+header div.logo_tel.container div.logo div.image img {
+  width: 64px;
+}
+@media (min-width: 992px) {
+  header div.logo_tel.container div.logo div.image img {
+    width: initial;
+  }
+}
+header div.logo_tel.container div.logo .profile div.business {
+  font-size: 11px;
+  font-weight: bold;
+  color: #005A87;
+}
+@media (min-width: 992px) {
+  header div.logo_tel.container div.logo .profile div.business {
+    font-size: 15px;
+    letter-spacing: 1.5px;
+  }
+}
+header div.logo_tel.container div.logo .profile .name h1, header div.logo_tel.container div.logo .profile .name .company_name {
+  font-size: 18px;
+  font-weight: bold;
+  color: #005A87;
+  display: flex;
+  gap: 0 4px;
+  align-items: center;
+}
+@media (min-width: 992px) {
+  header div.logo_tel.container div.logo .profile .name h1, header div.logo_tel.container div.logo .profile .name .company_name {
+    font-size: 30px;
+    line-height: 1;
+    letter-spacing: 0.12px;
+  }
+}
+header div.logo_tel.container div.logo .profile .name h1 div.label span, header div.logo_tel.container div.logo .profile .name .company_name div.label span {
+  background-color: #005A87;
+  color: #fff;
+  padding: 0 4px;
+  display: inline-block;
+}
+@media (min-width: 992px) {
+  header div.logo_tel.container div.logo .profile .name h1 div.label span, header div.logo_tel.container div.logo .profile .name .company_name div.label span {
+    font-size: 24px;
+    padding: 4px;
+    line-height: 1;
+  }
+}
+header div.logo_tel.container div.logo .profile div.area {
+  font-size: 10px;
+}
+@media (min-width: 992px) {
+  header div.logo_tel.container div.logo .profile div.area {
+    font-size: 14px;
+    margin-top: 8px;
+    letter-spacing: 0.06px;
+  }
+}
+header div.logo_tel.container div.tel {
+  display: none;
+}
+@media (min-width: 768px) {
+  header div.logo_tel.container div.tel {
+    display: block;
+    text-align: center;
+  }
+}
+header div.logo_tel.container div.tel div.label span {
+  background-color: #005A87;
+  color: #fff;
+  padding: 1px 24px;
+  border-radius: 100px;
+  display: inline-block;
+}
+@media (min-width: 768px) and (max-width: 991.98px) {
+  header div.logo_tel.container div.tel div.label span {
+    font-size: 12px;
+  }
+}
+@media (min-width: 768px) {
+  header div.logo_tel.container div.tel div.free {
+    display: flex;
+    align-items: center;
+    gap: 0 8px;
+  }
+}
+@media (min-width: 768px) {
+  header div.logo_tel.container div.tel div.free div.icon {
+    margin-top: 16px;
+  }
+}
+@media (min-width: 768px) {
+  header div.logo_tel.container div.tel div.free div.number {
+    margin-top: 10px;
+  }
+}
+@media (min-width: 768px) {
+  header div.logo_tel.container div.tel div.free div.number a {
+    font-size: 38px;
+    font-weight: bold;
+    letter-spacing: 1.9px;
+    line-height: 1;
+  }
+}
+@media (min-width: 768px) and (max-width: 991.98px) {
+  header div.logo_tel.container div.tel div.free div.number a {
+    font-size: 20px;
+  }
+}
+@media (min-width: 768px) {
+  header div.logo_tel.container div.tel div.free div.number a ruby rt {
+    font-size: 7px;
+    font-weight: normal;
+  }
+}
+@media (min-width: 768px) {
+  header div.logo_tel.container div.tel .time {
+    font-size: 14px;
+    letter-spacing: 0;
+  }
+}
+@media (min-width: 768px) and (max-width: 991.98px) {
+  header div.logo_tel.container div.tel .time {
+    font-size: 11px;
+  }
+}
+header button.menu {
+  position: fixed;
+  top: 8px;
+  right: 8px;
+  background-color: #EFFAFF;
+  z-index: 10;
+  border: 0;
+}
+@media (min-width: 768px) {
+  header button.menu {
+    top: 32px;
+    right: 24px;
+  }
+}
+header button.menu img {
+  width: 40px;
+}
+@media (min-width: 768px) {
+  header button.menu img {
+    width: initial;
+  }
+}
+header button.menu span.en {
+  display: block;
+  font-size: 11px;
+  color: #005A87;
+}
+@media (min-width: 768px) {
+  header button.menu span.en {
+    font-size: 13px;
+    margin-top: 8px;
+  }
+}
+header .hamburger {
+  width: 100% !important;
+  background-color: #073953;
+  padding-bottom: 64px;
+}
+header .hamburger .close {
+  text-align: right;
+}
+header .hamburger .close button {
+  background-color: transparent;
+  border: 0;
+}
+@media (min-width: 768px) {
+  header .hamburger .close button {
+    padding: 24px 32px;
+  }
+}
+header .hamburger .close button svg {
+  width: 32px;
+  fill: #fff;
+}
+@media (min-width: 768px) {
+  header .hamburger .close button svg {
+    width: 48px;
+  }
+}
+@media (min-width: 768px) {
+  header .hamburger .navi {
+    margin-top: 0;
+    height: 100%;
+    display: grid;
+    place-items: center;
+  }
+}
+header nav {
+  background-color: #005A87;
+  padding: 16px 0;
+}
+@media (min-width: 768px) {
+  header nav ul.container {
+    display: flex;
+    justify-content: space-between;
+    width: 1064px;
+  }
+}
+header nav ul.container li {
+  display: inline-block;
+  margin-right: 16px;
+}
+@media (min-width: 768px) {
+  header nav ul.container li {
+    margin-right: initial;
+    display: initial;
+  }
+}
+header nav ul.container li a {
+  color: #fff;
+}
+@media (min-width: 768px) and (max-width: 991.98px) {
+  header nav ul.container li a {
+    font-size: 12px;
+  }
+}
+
+.nextmain {
+  background-image: url("../img/about_mainimage.webp");
+  background-size: cover;
+  height: 180px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media (min-width: 768px) {
+  .nextmain {
+    height: 450px;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .nextmain {
+    height: 350px;
+  }
+}
+.nextmain .wrap {
+  color: #fff;
+}
+.nextmain .wrap h1 {
+  text-align: center;
+  font-size: 22px;
+  letter-spacing: 2px;
+  text-shadow: 0 0 5px #000;
+}
+@media (min-width: 768px) {
+  .nextmain .wrap h1 {
+    font-size: 38px;
+  }
+}
+.nextmain .wrap .en {
+  text-align: center;
+  font-size: 12px;
+  padding-top: 6px;
+  text-shadow: 0 0 5px #000;
+}
+@media (min-width: 768px) {
+  .nextmain .wrap .en {
+    font-size: 15px;
+  }
+}
+
+.side {
+  display: none;
+}
+@media (min-width: 768px) {
+  .side {
+    display: block;
+    position: fixed;
+    z-index: 10;
+    right: 0;
+    top: 50vh;
+  }
+}
+.side a {
+  display: grid;
+  place-items: center;
+  width: 60px;
+  height: 60px;
+  background-color: #fff;
+  border-radius: 12px 0 0 12px;
+  border: 1px solid #ddd;
+}
+.side a + a {
+  margin-top: 8px;
+}
+.side a img {
+  width: 37px;
+}
+
+div.about {
+  margin-top: 60px;
+}
+@media (min-width: 768px) {
+  div.about {
+    margin-top: 120px;
+  }
+}
+@media (min-width: 768px) and (max-width: 991.98px) {
+  div.about {
+    margin-top: 90px;
+  }
+}
+@media (min-width: 768px) {
+  div.about div.heading div.container {
+    width: 1116px;
+  }
+}
+@media (min-width: 768px) {
+  div.about div.heading div.container div.a {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 48px;
+    position: relative;
+  }
+}
+@media (min-width: 768px) and (max-width: 991.98px) {
+  div.about div.heading div.container div.a {
+    align-items: center;
+    gap: 24px;
+  }
+}
+@media (min-width: 768px) {
+  div.about div.heading div.container div.a div.image {
+    flex: 1;
+  }
+}
+@media (min-width: 768px) and (max-width: 991.98px) {
+  div.about div.heading div.container div.a div.image {
+    flex: unset;
+    width: 40%;
+  }
+}
+div.about div.heading div.container div.a div.image img.image {
+  width: 100%;
+}
+div.about div.heading div.container div.a div.text {
+  font-size: 16px;
+  letter-spacing: 1.35px;
+  line-height: 28px;
+  margin-top: 16px;
+}
+@media (min-width: 768px) {
+  div.about div.heading div.container div.a div.text {
+    font-size: 18px;
+    line-height: 46px;
+    flex: 1;
+  }
+}
+@media (min-width: 768px) and (max-width: 991.98px) {
+  div.about div.heading div.container div.a div.text {
+    font-size: 17px;
+    line-height: 35px;
+    margin-top: initial;
+  }
+}
+div.about div.heading div.container div.a div.text br {
+  display: none;
+}
+@media (min-width: 768px) {
+  div.about div.heading div.container div.a div.text br {
+    display: block;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  div.about div.heading div.container div.a div.text br {
+    display: none;
+  }
+}
+div.about div.heading div.container div.a img.sub_img {
+  width: 100%;
+  border-radius: 0 5px 5px 0;
+  margin-top: 16px;
+}
+@media (min-width: 768px) {
+  div.about div.heading div.container div.a img.sub_img {
+    width: initial;
+    position: absolute;
+    left: -64px;
+    bottom: -204px;
+    margin-top: initial;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  div.about div.heading div.container div.a img.sub_img {
+    width: 75%;
+    left: -16px;
+    bottom: -180px;
+  }
+}
+div.about section.service {
+  background-image: url("img/about_after_subscription_bg.webp");
+  background-size: cover;
+  margin-top: 40px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+@media (min-width: 768px) {
+  div.about section.service {
+    margin-top: 121px;
+    padding-top: 188px;
+    padding-bottom: 105px;
+  }
+}
+@media (min-width: 768px) and (max-width: 991.98px) {
+  div.about section.service {
+    margin-top: 100px;
+    padding-top: 140px;
+  }
+}
+@media (min-width: 768px) {
+  div.about section.service div.container {
+    width: 1166px;
+  }
+}
+div.about section.service div.container div.title hgroup {
+  text-align: center;
+}
+div.about section.service div.container div.title hgroup h2 {
+  font-size: 22px;
+  font-weight: bold;
+  letter-spacing: 3.2px;
+  line-height: 27px;
+  color: #005A87;
+}
+@media (min-width: 768px) {
+  div.about section.service div.container div.title hgroup h2 {
+    font-size: 32px;
+  }
+}
+@media (min-width: 768px) and (max-width: 991.98px) {
+  div.about section.service div.container div.title hgroup h2 {
+    font-size: 27px;
+  }
+}
+@media (min-width: 768px) {
+  div.about section.service div.container div.title hgroup h2 br {
+    display: none;
+  }
+}
+div.about section.service div.container div.title hgroup div.en {
+  font-size: 12px;
+  letter-spacing: 0.75px;
+  line-height: 27px;
+  color: #005A87;
+  opacity: 0.5;
+  margin-top: 4px;
+}
+@media (min-width: 768px) {
+  div.about section.service div.container div.title hgroup div.en {
+    font-size: 15px;
+    margin-top: 12px;
+  }
+}
+@media (min-width: 768px) and (max-width: 991.98px) {
+  div.about section.service div.container div.title hgroup div.en {
+    font-size: 14px;
+    margin-top: 8px;
+  }
+}
+div.about section.service div.container div.data {
+  margin-top: 24px;
+}
+@media (min-width: 768px) {
+  div.about section.service div.container div.data {
+    margin-top: 67px;
+  }
+}
+@media (min-width: 768px) and (max-width: 991.98px) {
+  div.about section.service div.container div.data {
+    width: 90%;
+    margin: 44px auto 0;
+  }
+}
+@media (min-width: 768px) {
+  div.about section.service div.container div.data div.item {
+    display: flex;
+  }
+}
+@media (min-width: 768px) and (max-width: 991.98px) {
+  div.about section.service div.container div.data div.item {
+    display: block;
+  }
+}
+div.about section.service div.container div.data div.item div.image {
+  position: relative;
+}
+@media (min-width: 768px) {
+  div.about section.service div.container div.data div.item div.image {
+    width: 56%;
+  }
+}
+@media (min-width: 768px) and (max-width: 991.98px) {
+  div.about section.service div.container div.data div.item div.image {
+    width: initial;
+  }
+}
+@media (min-width: 992px) and (max-width: 1024px) {
+  div.about section.service div.container div.data div.item div.image {
+    width: 52%;
+  }
+}
+div.about section.service div.container div.data div.item div.image img.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+div.about section.service div.container div.data div.item div.image div.motto {
+  font-size: 36px;
+  font-weight: 500;
+  line-height: 71px;
+  letter-spacing: 0;
+  color: #D9D9D9;
+  mix-blend-mode: multiply;
+  position: absolute;
+  left: 5%;
+  bottom: -36px;
+  z-index: 1;
+}
+@media (min-width: 768px) {
+  div.about section.service div.container div.data div.item div.image div.motto {
+    font-size: 165px;
+    left: unset;
+    bottom: -16px;
+  }
+}
+@media (min-width: 768px) and (max-width: 991.98px) {
+  div.about section.service div.container div.data div.item div.image div.motto {
+    font-size: 72px;
+    bottom: -40px;
+  }
+}
+@media (min-width: 992px) and (max-width: 1024px) {
+  div.about section.service div.container div.data div.item div.image div.motto {
+    font-size: 100px;
+  }
+}
+div.about section.service div.container div.data div.item div.text {
+  background-color: #fff;
+  padding-top: 24px;
+  padding: 32px 16px;
+}
+@media (min-width: 768px) {
+  div.about section.service div.container div.data div.item div.text {
+    flex: 1;
+    position: relative;
+    padding: 196px 65px 64px;
+  }
+}
+@media (min-width: 768px) and (max-width: 991.98px) {
+  div.about section.service div.container div.data div.item div.text {
+    padding: 64px 32px;
+  }
+}
+@media (min-width: 992px) and (max-width: 1024px) {
+  div.about section.service div.container div.data div.item div.text {
+    padding: 196px 32px 64px;
+  }
+}
+div.about section.service div.container div.data div.item div.text div.caption {
+  font-size: 22px;
+  letter-spacing: 3.9px;
+  line-height: 28px;
+  color: #fff;
+  background-color: #005A87;
+  padding: 10px;
+}
+@media (min-width: 768px) {
+  div.about section.service div.container div.data div.item div.text div.caption {
+    font-size: 26px;
+    line-height: 34px;
+    position: absolute;
+    left: 50%;
+    top: 12%;
+    transform: translateX(-50%);
+    width: 630px;
+    padding: 22px 85px;
+  }
+}
+@media (min-width: 768px) and (max-width: 991.98px) {
+  div.about section.service div.container div.data div.item div.text div.caption {
+    position: relative;
+    top: unset;
+    left: unset;
+    transform: unset;
+    width: unset;
+    text-align: center;
+    padding: 16px;
+  }
+}
+@media (min-width: 992px) and (max-width: 1024px) {
+  div.about section.service div.container div.data div.item div.text div.caption {
+    width: 530px;
+    text-align: center;
+    padding: 16px;
+  }
+}
+div.about section.service div.container div.data div.item div.text div.description {
+  font-weight: 500;
+  letter-spacing: 0.75px;
+  line-height: 24px;
+  margin-top: 16px;
+}
+@media (min-width: 768px) {
+  div.about section.service div.container div.data div.item div.text div.description {
+    font-size: 15px;
+    line-height: 30px;
+    margin-top: initial;
+  }
+}
+@media (min-width: 768px) and (max-width: 991.98px) {
+  div.about section.service div.container div.data div.item div.text div.description {
+    margin-top: 40px;
+  }
+}
+div.about section.service div.container div.data div.item div.text div.description div.plan {
+  margin-top: 16px;
+}
+div.about section.service div.container div.data div.item div.text div.description div.plan div.sub_title {
+  font-weight: 500;
+  letter-spacing: 0.75px;
+  line-height: 34px;
+  line-height: 24px;
+  color: #fff;
+  background-color: #67AED2;
+  display: inline-block;
+  margin-bottom: 8px;
+  padding: 0px 6px;
+}
+@media (min-width: 768px) {
+  div.about section.service div.container div.data div.item div.text div.description div.plan div.sub_title {
+    margin-bottom: 12px;
+    padding: 2px 10px;
+  }
+}
+@media (min-width: 768px) {
+  div.about section.service div.container div.data div.item div.text div.description ul.lists {
+    margin-left: 10px;
+  }
+}
+@media (min-width: 768px) and (max-width: 991.98px) {
+  div.about section.service div.container div.data div.item div.text div.description ul.lists {
+    margin-left: 32px;
+  }
+}
+div.about section.service div.container div.data div.item div.text div.description ul.lists li {
+  font-weight: 500;
+  letter-spacing: 0.75px;
+  line-height: 38px;
+  line-height: 20px;
+  color: #2D2D2D;
+  display: flex;
+  align-items: baseline;
+  gap: 4px;
+}
+@media (min-width: 768px) {
+  div.about section.service div.container div.data div.item div.text div.description ul.lists li {
+    gap: 10px;
+  }
+}
+div.about section.service div.container div.data div.item div.text div.description ul.lists li div.name {
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.75px;
+}
+@media (min-width: 768px) {
+  div.about section.service div.container div.data div.item div.text div.description ul.lists li div.name {
+    font-size: 15px;
+  }
+}
+div.about section.service div.container div.data div.item div.text div.description ul.lists li div.name span.term {
+  color: #005A87;
+  margin-left: 8px;
+}
+div.about section.service div.container div.data div.item div.text div.description ul.lists li div.name small {
+  font-size: 12px;
+  font-weight: 300;
+  letter-spacing: 0.65px;
+  line-height: 34px;
+  line-height: 14px;
+}
+@media (min-width: 768px) {
+  div.about section.service div.container div.data div.item div.text div.description ul.lists li div.name small {
+    font-size: 13px;
+    line-height: 30px;
+    display: block;
+  }
+}
+div.about section.service div.container div.data div.item div.text div.description ul.lists li + li {
+  margin-top: 8px;
+}
+@media (min-width: 768px) {
+  div.about section.service div.container div.data div.item div.text div.description ul.lists li + li {
+    margin-top: 16px;
+  }
+}
+@media (min-width: 768px) {
+  div.about section.service div.container div.data div.item:nth-child(1) {
+    flex-direction: row-reverse;
+  }
+}
+div.about section.service div.container div.data div.item:nth-child(1) div.image img.image {
+  border-radius: 0 50px 0 0;
+}
+@media (min-width: 768px) {
+  div.about section.service div.container div.data div.item:nth-child(1) div.image div.motto {
+    left: -10%;
+  }
+}
+@media (min-width: 768px) and (max-width: 991.98px) {
+  div.about section.service div.container div.data div.item:nth-child(1) div.image div.motto {
+    left: initial;
+  }
+}
+@media (min-width: 768px) {
+  div.about section.service div.container div.data div.item:nth-child(1) div.text div.caption {
+    left: 55%;
+  }
+}
+@media (min-width: 768px) and (max-width: 991.98px) {
+  div.about section.service div.container div.data div.item:nth-child(1) div.text div.caption {
+    left: unset;
+  }
+}
+div.about section.service div.container div.data div.item:nth-child(2) div.image img.image {
+  border-radius: 50px 0 0 0;
+}
+div.about section.service div.container div.data div.item:nth-child(2) div.image div.motto {
+  left: 5%;
+}
+@media (min-width: 768px) and (max-width: 991.98px) {
+  div.about section.service div.container div.data div.item:nth-child(2) div.image div.motto {
+    left: initial;
+  }
+}
+@media (min-width: 768px) {
+  div.about section.service div.container div.data div.item:nth-child(2) div.text div.caption {
+    left: 45%;
+  }
+}
+@media (min-width: 768px) and (max-width: 991.98px) {
+  div.about section.service div.container div.data div.item:nth-child(2) div.text div.caption {
+    left: initial;
+  }
+}
+div.about section.service div.container div.data div.item + .item {
+  margin-top: 50px;
+}
+@media (min-width: 768px) {
+  div.about section.service div.container div.data div.item + .item {
+    margin-top: 174px;
+  }
+}
+@media (min-width: 768px) and (max-width: 991.98px) {
+  div.about section.service div.container div.data div.item + .item {
+    margin-top: 100px;
+  }
+}
+div.about section.service div.message {
+  margin-top: 40px;
+}
+@media (min-width: 768px) {
+  div.about section.service div.message {
+    margin-top: 190px;
+  }
+}
+@media (min-width: 768px) and (max-width: 991.98px) {
+  div.about section.service div.message {
+    margin-top: 140px;
+  }
+}
+div.about section.service div.message div.white_wrap {
+  background-color: #fff;
+  border: 3px solid #005A87;
+  border-radius: 10px;
+  position: relative;
+}
+div.about section.service div.message div.white_wrap img.face {
+  display: none;
+}
+@media (min-width: 768px) {
+  div.about section.service div.message div.white_wrap img.face {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 4%;
+  }
+}
+div.about section.service div.message div.white_wrap div.text {
+  font-size: 16px;
+  font-weight: bold;
+  letter-spacing: 0.9px;
+  line-height: 28px;
+  color: #005A87;
+  padding: 16px;
+}
+@media (min-width: 768px) {
+  div.about section.service div.message div.white_wrap div.text {
+    font-size: 18px;
+    line-height: 40px;
+    padding: 40px 40px 40px 300px;
+  }
+}
+@media (min-width: 768px) and (max-width: 991.98px) {
+  div.about section.service div.message div.white_wrap div.text {
+    font-size: 17px;
+    line-height: 34px;
+    padding: 28px 28px 28px 280px;
+  }
+}
+div.about section.service div.message div.white_wrap div.text br {
+  display: none;
+}
+@media (min-width: 768px) {
+  div.about section.service div.message div.white_wrap div.text br {
+    display: block;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  div.about section.service div.message div.white_wrap div.text br {
+    display: none;
+  }
+}
+@media (min-width: 768px) {
+  div.about section.service div.message.container {
+    width: 1012px;
+  }
+}
+div.about section.model {
+  position: relative;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+@media (min-width: 768px) {
+  div.about section.model {
+    padding-top: 124px;
+    padding-bottom: 140px;
+  }
+}
+@media (min-width: 768px) and (max-width: 991.98px) {
+  div.about section.model {
+    padding-top: 82px;
+    padding-bottom: 90px;
+  }
+}
+@media (min-width: 768px) {
+  div.about section.model div.container {
+    width: 1166px;
+  }
+}
+div.about section.model div.container div.title hgroup {
+  text-align: center;
+}
+div.about section.model div.container div.title hgroup h2 {
+  font-size: 22px;
+  font-weight: bold;
+  letter-spacing: 3.2px;
+  line-height: 27px;
+  color: #005A87;
+}
+@media (min-width: 768px) {
+  div.about section.model div.container div.title hgroup h2 {
+    font-size: 32px;
+  }
+}
+@media (min-width: 768px) and (max-width: 991.98px) {
+  div.about section.model div.container div.title hgroup h2 {
+    font-size: 27px;
+  }
+}
+@media (min-width: 768px) {
+  div.about section.model div.container div.title hgroup h2 br {
+    display: none;
+  }
+}
+div.about section.model div.container div.title hgroup div.en {
+  font-size: 12px;
+  letter-spacing: 0.75px;
+  line-height: 27px;
+  color: #005A87;
+  opacity: 0.5;
+  margin-top: 4px;
+}
+@media (min-width: 768px) {
+  div.about section.model div.container div.title hgroup div.en {
+    font-size: 15px;
+    margin-top: 12px;
+  }
+}
+@media (min-width: 768px) and (max-width: 991.98px) {
+  div.about section.model div.container div.title hgroup div.en {
+    font-size: 14px;
+    margin-top: 8px;
+  }
+}
+div.about section.model div.container div.data {
+  margin-top: 24px;
+}
+@media (min-width: 768px) {
+  div.about section.model div.container div.data {
+    margin-top: 80px;
+  }
+}
+@media (min-width: 768px) and (max-width: 991.98px) {
+  div.about section.model div.container div.data {
+    width: 90%;
+    margin: 52px auto 0;
+  }
+}
+@media (min-width: 768px) {
+  div.about section.model div.container div.data div.description {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+  }
+}
+@media (min-width: 768px) and (max-width: 991.98px) {
+  div.about section.model div.container div.data div.description {
+    display: block;
+  }
+}
+@media (min-width: 768px) {
+  div.about section.model div.container div.data div.description div.mainimage {
+    width: 55%;
+  }
+}
+@media (min-width: 768px) and (max-width: 991.98px) {
+  div.about section.model div.container div.data div.description div.mainimage {
+    width: initial;
+  }
+}
+@media (min-width: 992px) and (max-width: 1024px) {
+  div.about section.model div.container div.data div.description div.mainimage {
+    width: 48%;
+  }
+}
+div.about section.model div.container div.data div.description div.mainimage img.main {
+  width: 100%;
+}
+div.about section.model div.container div.data div.description dl.text {
+  margin-top: 16px;
+}
+@media (min-width: 768px) {
+  div.about section.model div.container div.data div.description dl.text {
+    flex: 1;
+    margin-top: initial;
+  }
+}
+@media (min-width: 768px) and (max-width: 991.98px) {
+  div.about section.model div.container div.data div.description dl.text {
+    margin-top: 32px;
+  }
+}
+div.about section.model div.container div.data div.description dl.text dt {
+  font-size: 22px;
+  letter-spacing: 2.6px;
+  line-height: 27px;
+  color: #1B3052;
+}
+@media (min-width: 768px) {
+  div.about section.model div.container div.data div.description dl.text dt {
+    font-size: 26px;
+  }
+}
+@media (min-width: 768px) and (max-width: 991.98px) {
+  div.about section.model div.container div.data div.description dl.text dt {
+    font-size: 24px;
+  }
+}
+div.about section.model div.container div.data div.description dl.text dd {
+  letter-spacing: 0.75px;
+  line-height: 25px;
+  color: #2D2D2D;
+  margin-top: 8px;
+}
+@media (min-width: 768px) {
+  div.about section.model div.container div.data div.description dl.text dd {
+    line-height: 30px;
+    margin-top: 32px;
+  }
+}
+@media (min-width: 768px) and (max-width: 991.98px) {
+  div.about section.model div.container div.data div.description dl.text dd {
+    font-size: 15px;
+  }
+}
+div.about section.model div.container div.data div.description dl.text dd br {
+  display: none;
+}
+@media (min-width: 768px) {
+  div.about section.model div.container div.data div.description dl.text dd br {
+    display: block;
+  }
+}
+@media (min-width: 768px) and (max-width: 991.98px) {
+  div.about section.model div.container div.data div.description dl.text dd br {
+    display: none;
+  }
+}
+div.about section.model div.container div.data div.description dl.text dd div.profile {
+  background-color: #fff;
+  border-radius: 10px;
+  margin-top: 24px;
+  padding: 16px;
+}
+@media (min-width: 768px) {
+  div.about section.model div.container div.data div.description dl.text dd div.profile {
+    margin-top: 72px;
+    padding: 24px 20px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  div.about section.model div.container div.data div.description dl.text dd div.profile {
+    margin-top: 32px;
+  }
+}
+div.about section.model div.container div.data div.description dl.text dd div.profile table tbody tr th {
+  font-weight: 400;
+  letter-spacing: 3px;
+  line-height: 27px;
+  line-height: 20px;
+  color: #fff;
+  background-color: #005A87;
+  width: 30%;
+  text-align: center;
+  border-bottom: 5px solid #fff;
+  padding: 2px 4px 6px;
+}
+@media (min-width: 768px) {
+  div.about section.model div.container div.data div.description dl.text dd div.profile table tbody tr th {
+    padding: 10px;
+  }
+}
+div.about section.model div.container div.data div.description dl.text dd div.profile table tbody tr td {
+  font-weight: 500;
+  line-height: 22px;
+  width: 65%;
+  position: relative;
+  padding: 2px 10px 6px;
+}
+@media (min-width: 768px) {
+  div.about section.model div.container div.data div.description dl.text dd div.profile table tbody tr td {
+    padding: 10px 0 10px 16px;
+  }
+}
+div.about section.model div.container div.data div.description dl.text dd div.profile table tbody tr td::after {
+  position: absolute;
+  content: "";
+  background-color: #005A87;
+  width: 98%;
+  height: 1px;
+  bottom: 3px;
+  right: 0;
+}
+div.about section.model div.container div.data div.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 36px;
+}
+@media (min-width: 768px) {
+  div.about section.model div.container div.data div.gallery {
+    flex-wrap: initial;
+    gap: 66px;
+    margin-top: 64px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  div.about section.model div.container div.data div.gallery {
+    gap: 40px;
+    margin-top: 50px;
+  }
+}
+div.about section.model div.container div.data div.gallery img.image {
+  width: 46%;
+}
+@media (min-width: 768px) {
+  div.about section.model div.container div.data div.gallery img.image {
+    flex: 1;
+    width: 100%;
+  }
+}
+@media (min-width: 768px) and (max-width: 991.98px) {
+  div.about section.model div.container div.data div.gallery img.image {
+    flex: initial;
+    width: initial;
+    width: 29%;
+  }
+}
+@media (min-width: 992px) and (max-width: 1024px) {
+  div.about section.model div.container div.data div.gallery img.image {
+    width: 25%;
+  }
+}
+div.about section.model div.model_bg {
+  background-color: #E0E9EE;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  bottom: 0;
+  z-index: -1;
+}
+@media (min-width: 768px) {
+  div.about section.model div.model_bg {
+    height: 688px;
+  }
+}
+@media (min-width: 768px) and (max-width: 991.98px) {
+  div.about section.model div.model_bg {
+    height: 100%;
+  }
+}
+@media (min-width: 992px) and (max-width: 1024px) {
+  div.about section.model div.model_bg {
+    height: 635px;
+  }
+}
+div.about section.attempt {
+  background-color: #3D86AB;
+  padding-top: 40px;
+}
+@media (min-width: 768px) {
+  div.about section.attempt {
+    padding-top: 148px;
+  }
+}
+@media (min-width: 768px) and (max-width: 991.98px) {
+  div.about section.attempt {
+    padding-top: 94px;
+  }
+}
+div.about section.attempt div.container div.title hgroup {
+  text-align: center;
+}
+div.about section.attempt div.container div.title hgroup h2 {
+  font-size: 22px;
+  font-weight: bold;
+  letter-spacing: 3.2px;
+  line-height: 27px;
+  color: #fff;
+}
+@media (min-width: 768px) {
+  div.about section.attempt div.container div.title hgroup h2 {
+    font-size: 32px;
+  }
+}
+@media (min-width: 768px) and (max-width: 991.98px) {
+  div.about section.attempt div.container div.title hgroup h2 {
+    font-size: 27px;
+  }
+}
+@media (min-width: 768px) {
+  div.about section.attempt div.container div.title hgroup h2 br {
+    display: none;
+  }
+}
+div.about section.attempt div.container div.title hgroup div.en {
+  font-size: 12px;
+  letter-spacing: 0.75px;
+  line-height: 27px;
+  color: #fff;
+  opacity: 0.5;
+  margin-top: 4px;
+}
+@media (min-width: 768px) {
+  div.about section.attempt div.container div.title hgroup div.en {
+    font-size: 15px;
+    margin-top: 12px;
+  }
+}
+@media (min-width: 768px) and (max-width: 991.98px) {
+  div.about section.attempt div.container div.title hgroup div.en {
+    font-size: 14px;
+    margin-top: 8px;
+  }
+}
+div.about section.attempt div.container div.data {
+  margin: 24px auto 0;
+  padding-bottom: 72px;
+}
+@media (min-width: 768px) {
+  div.about section.attempt div.container div.data {
+    display: flex;
+    gap: 38px;
+    margin-top: 80px;
+    padding-bottom: 145px;
+  }
+}
+@media (min-width: 768px) and (max-width: 991.98px) {
+  div.about section.attempt div.container div.data {
+    flex-wrap: wrap;
+    gap: 24px;
+  }
+}
+div.about section.attempt div.container div.data div.item {
+  position: relative;
+}
+@media (min-width: 768px) and (max-width: 991.98px) {
+  div.about section.attempt div.container div.data div.item {
+    width: 46%;
+  }
+}
+div.about section.attempt div.container div.data div.item img.img {
+  position: absolute;
+  left: 50%;
+  top: 84px;
+  transform: translateX(-50%);
+  width: 100%;
+}
+@media (min-width: 768px) {
+  div.about section.attempt div.container div.data div.item img.img {
+    top: 124px;
+    height: 225px;
+    object-fit: cover;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  div.about section.attempt div.container div.data div.item img.img {
+    top: 108px;
+  }
+}
+div.about section.attempt div.container div.data div.item div.text {
+  background-color: #fff;
+  border-radius: 20px 20px 0 0;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1607843137);
+  width: 90%;
+  margin: 0 auto;
+  padding: 20px 16px;
+}
+@media (min-width: 768px) {
+  div.about section.attempt div.container div.data div.item div.text {
+    width: 92%;
+    padding: 30px 20px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  div.about section.attempt div.container div.data div.item div.text {
+    width: 95%;
+    padding: 25px 18px;
+  }
+}
+div.about section.attempt div.container div.data div.item div.text div.title {
+  font-size: 22px;
+  font-weight: bold;
+  letter-spacing: 1.4px;
+  line-height: 25px;
+  color: #005A87;
+  text-align: center;
+}
+@media (min-width: 768px) {
+  div.about section.attempt div.container div.data div.item div.text div.title {
+    font-size: 28px;
+    line-height: 38px;
+  }
+}
+@media (min-width: 768px) and (max-width: 991.98px) {
+  div.about section.attempt div.container div.data div.item div.text div.title {
+    font-size: 25px;
+    line-height: 33px;
+  }
+}
+@media (min-width: 992px) and (max-width: 991.98px) {
+  div.about section.attempt div.container div.data div.item div.text div.title {
+    font-size: 25px;
+  }
+}
+@media (min-width: 992px) and (max-width: 1024px) {
+  div.about section.attempt div.container div.data div.item div.text div.title {
+    font-size: 22px;
+    line-height: 30px;
+  }
+}
+div.about section.attempt div.container div.data div.item div.text div.title span.company {
+  font-size: 18px;
+  font-weight: bold;
+  letter-spacing: 1.2px;
+  line-height: 25px;
+  color: #005A87;
+}
+@media (min-width: 768px) {
+  div.about section.attempt div.container div.data div.item div.text div.title span.company {
+    font-size: 24px;
+    line-height: 38px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  div.about section.attempt div.container div.data div.item div.text div.title span.company {
+    font-size: 21px;
+    line-height: 30px;
+  }
+}
+div.about section.attempt div.container div.data div.item div.text div.description {
+  font-weight: 500;
+  letter-spacing: 0.75px;
+  line-height: 26px;
+  line-height: 23px;
+  color: #2D2D2D;
+  margin-top: 225px;
+}
+@media (min-width: 768px) {
+  div.about section.attempt div.container div.data div.item div.text div.description {
+    margin-top: 273px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  div.about section.attempt div.container div.data div.item div.text div.description {
+    margin-top: 290px;
+    height: 120px;
+  }
+}
+@media (min-width: 992px) and (max-width: 1024px) {
+  div.about section.attempt div.container div.data div.item div.text div.description {
+    margin-top: 270px;
+  }
+}
+div.about section.attempt div.container div.data div.item div.text div.description br {
+  display: none;
+}
+@media (min-width: 768px) {
+  div.about section.attempt div.container div.data div.item div.text div.description br {
+    display: block;
+  }
+}
+@media (min-width: 768px) and (max-width: 991.98px) {
+  div.about section.attempt div.container div.data div.item div.text div.description br {
+    display: none;
+  }
+}
+div.about section.attempt div.container div.data div.item div.text div.link {
+  margin-top: 16px;
+}
+@media (min-width: 768px) {
+  div.about section.attempt div.container div.data div.item div.text div.link {
+    margin-top: 24px;
+  }
+}
+@media (min-width: 992px) and (max-width: 1024px) {
+  div.about section.attempt div.container div.data div.item div.text div.link {
+    margin-top: 40px;
+  }
+}
+div.about section.attempt div.container div.data div.item div.text div.link a {
+  letter-spacing: 1.5px;
+  line-height: 22px;
+  line-height: 18px;
+  background-color: #89753B;
+  color: #fff;
+  width: 100%;
+  display: block;
+  border-radius: 100px;
+  text-align: center;
+  position: relative;
+  padding: 8px;
+}
+@media (min-width: 768px) {
+  div.about section.attempt div.container div.data div.item div.text div.link a {
+    padding: 12px;
+  }
+}
+@media (min-width: 768px) and (max-width: 991.98px) {
+  div.about section.attempt div.container div.data div.item div.text div.link a {
+    font-size: 15px;
+  }
+}
+@media (min-width: 992px) and (max-width: 1024px) {
+  div.about section.attempt div.container div.data div.item div.text div.link a {
+    padding: 12px 32px;
+  }
+}
+@media (min-width: 768px) {
+  div.about section.attempt div.container div.data div.item div.text div.link a br {
+    display: none;
+  }
+}
+@media (min-width: 768px) and (max-width: 991.98px) {
+  div.about section.attempt div.container div.data div.item div.text div.link a br {
+    display: block;
+  }
+}
+div.about section.attempt div.container div.data div.item div.text div.link a img.arrow {
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+@media (min-width: 768px) {
+  div.about section.attempt div.container div.data div.item div.text div.link a img.arrow {
+    right: 12px;
+  }
+}
+div.about section.attempt div.container div.data div.item + .item {
+  margin-top: 32px;
+}
+@media (min-width: 768px) {
+  div.about section.attempt div.container div.data div.item + .item {
+    margin-top: initial;
+  }
+}
+
+footer .navi, .hamburger .navi {
+  margin-top: 32px;
+}
+@media (min-width: 768px) {
+  footer .navi, .hamburger .navi {
+    margin-top: 141px;
+  }
+}
+footer .navi ul.container, .hamburger .navi ul.container {
+  width: 200px;
+}
+@media (min-width: 768px) {
+  footer .navi ul.container, .hamburger .navi ul.container {
+    width: initial;
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1199.98px) {
+  footer .navi ul.container, .hamburger .navi ul.container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 48px;
+    width: 640px;
+  }
+}
+footer .navi ul.container li + li, .hamburger .navi ul.container li + li {
+  margin-top: 24px;
+}
+@media (min-width: 768px) {
+  footer .navi ul.container li + li, .hamburger .navi ul.container li + li {
+    margin-top: 0;
+  }
+}
+footer .navi ul.container li a, .hamburger .navi ul.container li a {
+  color: #fff;
+  font-weight: bold;
+}
+@media (min-width: 768px) {
+  footer .navi ul.container li a, .hamburger .navi ul.container li a {
+    font-size: 16px;
+  }
+}
+footer .navi ul.container li ul, .hamburger .navi ul.container li ul {
+  margin-top: 8px;
+}
+@media (min-width: 768px) and (max-width: 1199.98px) {
+  footer .navi ul.container li ul li, .hamburger .navi ul.container li ul li {
+    width: initial;
+  }
+}
+footer .navi ul.container li ul li + li, .hamburger .navi ul.container li ul li + li {
+  margin-top: 4px;
+}
+footer .navi ul.container li ul li:before, .hamburger .navi ul.container li ul li:before {
+  content: "ー";
+  color: #fff;
+}
+@media (min-width: 768px) {
+  footer .navi ul.container li ul li:before, .hamburger .navi ul.container li ul li:before {
+    font-size: 14px;
+  }
+}
+footer .navi ul.container li ul li a, .hamburger .navi ul.container li ul li a {
+  font-weight: normal;
+}
+@media (min-width: 768px) {
+  footer .navi ul.container li ul li a, .hamburger .navi ul.container li ul li a {
+    font-size: 14px;
+  }
+}
+
+footer {
+  background-color: #073953;
+  padding: 40px 0 8px;
+  position: relative;
+}
+@media (min-width: 768px) {
+  footer {
+    padding: 90px 0 24px;
+  }
+}
+footer div.pagetop.container {
+  position: absolute;
+  top: -24px;
+  left: 0;
+  right: 0;
+}
+@media (min-width: 768px) {
+  footer div.pagetop.container {
+    top: -38px;
+  }
+}
+footer div.pagetop.container a {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  margin: 0 0 0 auto;
+  background-color: #fff;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1607843137);
+}
+@media (min-width: 768px) {
+  footer div.pagetop.container a {
+    width: 76px;
+    height: 76px;
+  }
+}
+footer div.pagetop.container a svg {
+  width: 24px;
+}
+@media (min-width: 768px) {
+  footer div.pagetop.container a svg {
+    width: 38px;
+  }
+}
+@media (min-width: 992px) {
+  footer .profile.container {
+    display: flex;
+    align-items: center;
+    gap: 0 40px;
+    width: 1186px;
+  }
+}
+footer .profile.container .logo_name {
+  display: flex;
+  align-items: center;
+  gap: 0 24px;
+}
+@media (min-width: 768px) {
+  footer .profile.container .logo_name {
+    gap: 0 40px;
+  }
+}
+footer .profile.container .logo_name div.logo {
+  width: 30%;
+}
+@media (min-width: 768px) {
+  footer .profile.container .logo_name div.logo {
+    width: initial;
+  }
+}
+footer .profile.container .logo_name .name {
+  color: #fff;
+}
+@media (min-width: 768px) {
+  footer .profile.container .shops {
+    gap: 40px 48px;
+    flex: 1;
+  }
+}
+footer .profile.container div.address_tel {
+  margin-top: 24px;
+  align-items: flex-start;
+  gap: 0 16px;
+}
+@media (min-width: 768px) {
+  footer .profile.container div.address_tel {
+    display: flex;
+    gap: 40px 16px;
+  }
+}
+footer .profile.container div.address_tel div.label span {
+  background-color: #fff;
+  display: inline-block;
+  padding: 0px 8px;
+  min-width: 110px;
+  text-align: center;
+}
+@media (min-width: 768px) and (max-width: 1399.98px) {
+  footer .profile.container div.address_tel div.label span {
+    font-size: 14px;
+  }
+}
+footer .profile.container div.address_tel div.value {
+  color: #fff;
+  flex: 1;
+  margin-top: 4px;
+}
+@media (min-width: 768px) {
+  footer .profile.container div.address_tel div.value {
+    margin-top: initial;
+    font-size: 14px;
+  }
+}
+footer div.banner.container {
+  margin-top: 40px;
+}
+@media (min-width: 768px) {
+  footer div.banner.container {
+    margin-top: 127px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px 63px;
+  }
+}
+@media (min-width: 768px) and (max-width: 991.98px) {
+  footer div.banner.container {
+    gap: 40px 24px;
+  }
+}
+footer div.banner.container a {
+  display: block;
+  border: 1px solid #fff;
+  text-align: center;
+  padding: 8px 0;
+}
+@media (min-width: 768px) {
+  footer div.banner.container a {
+    flex: 1;
+    display: grid;
+    place-items: center;
+  }
+}
+footer div.banner.container a + a {
+  margin-top: 16px;
+}
+@media (min-width: 768px) {
+  footer div.banner.container a + a {
+    margin-top: 0;
+  }
+}
+footer div.banner.container a img {
+  height: 64px;
+}
+@media (min-width: 992px) {
+  footer div.banner.container a img {
+    height: initial;
+  }
+}
+footer div.banner.container a.inth {
+  background-color: #000d36;
+  border-color: transparent;
+}
+footer div.banner.container a.niwaya {
+  background-color: #FFFFFF;
+}
+footer div.banner.container a.niwaya img {
+  height: 56px;
+}
+footer div.banner.container a.reform {
+  background-color: #F3F3F3;
+}
+footer div.banner.container a.reform {
+  background-color: #F3F3F3;
+}
+footer div.banner.container a.garden {
+  background-color: #fff;
+}
+footer div.banner.container a.resort {
+  background-color: #84CBC5;
+  border-color: transparent;
+}
+footer div.banner.container a.artwall {
+  background-color: #fff;
+}
+footer .primary {
+  margin-top: 32px;
+  display: flex;
+  justify-content: center;
+  gap: 0 8px;
+}
+@media (min-width: 768px) {
+  footer .primary {
+    margin-top: 152px;
+    gap: 0 16px;
+    font-size: 14px;
+  }
+}
+footer .primary a {
+  color: #fff;
+  text-decoration: underline;
+}
+footer div.copy {
+  margin-top: 16px;
+  margin-top: 32px;
+  font-size: 12px;
+  color: #fff;
+}
+@media (min-width: 768px) {
+  footer div.copy {
+    margin-top: 152px;
+    text-align: center;
+    font-size: 13px;
+    letter-spacing: 1.3px;
+  }
+}/*# sourceMappingURL=style.css.map */
