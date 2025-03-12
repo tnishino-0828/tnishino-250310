@@ -575,7 +575,7 @@ div.about div.heading div.container div.a img.sub_img {
   }
 }
 div.about section.service {
-  background-image: url("img/about_after_subscription_bg.webp");
+  background-image: url("../img/about_after_subscription_bg.webp");
   background-size: cover;
   margin-top: 40px;
   padding-top: 40px;
